@@ -7,8 +7,8 @@ namespace ConsoleAnimation
         readonly char b = '*';
         readonly int m = Console.CursorLeft;
         readonly int n = Console.CursorTop;
-                 int y = 0;
-                 int z = 0;
+        int y = 0;
+        int z = 0;
         readonly char[,] A = new char[15, 100];
 
         void View_1(char[,] c)
@@ -56,5 +56,36 @@ namespace ConsoleAnimation
 
             }
         }
+
+        void Show_1(object o)
+        {
+
+            for (int i = 0; i < A.GetLength(0); i++)
+            {
+                for (int j = 0; j < A.GetLength(1); j++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(A[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            Console.SetCursorPosition(m, n);
+        }
+        void ShowEmpty(char[,] c)
+        {
+            for (int i = 0; i < c.GetLength(0); i++)
+            {
+                for (int j = 0; j < c.GetLength(1); j++)
+                {
+                    c[i, j] = ' ';
+
+                }
+                Console.WriteLine();
+            }
+
+            Console.SetCursorPosition(m, n);
+        }
+
     }
 }
