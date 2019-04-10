@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace ConsoleAnimation
 {
     class MatrixAnimation
@@ -87,16 +86,17 @@ namespace ConsoleAnimation
             Console.SetCursorPosition(m, n);
         }
 
-        public void Showmatrix(object o)
+        public void ShowAnimation(object o)
         {
 
             View_1();
-            for (int i = 0; i < 3; i++) { Show(); }
+            for (int i = 0; i < 6; i++) { Show(); }
             ShowEmpty();
             View_2();
             Show();
             ShowEmpty();
 
         }
+
     }
 }

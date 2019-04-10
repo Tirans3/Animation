@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+
 
 namespace ConsoleAnimation
 {
@@ -10,6 +8,17 @@ namespace ConsoleAnimation
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
+
+            int a = 0;
+
+            MatrixAnimation ff = new MatrixAnimation();
+
+
+            Timer T = new Timer(ff.ShowAnimation, 0, a, 1000);
+
+
+            Console.ReadLine();
         }
     }
 }
